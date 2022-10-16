@@ -1,0 +1,158 @@
+body {
+  display: flex;
+  margin-top: 24px;
+  justify-content: center;
+  background-color: #beffbe;
+  font-family: "Poppins", sans-serif;
+}
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+#header {
+  padding: 10px;
+  color: #013517;
+  font-size: 26px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+#header button {
+  background-color: #16b900;
+}
+#header button:hover {
+  background-color: #38be26;
+}
+#container {
+  width: 770px;
+  text-transform: capitalize;
+}
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: #003d57;
+  text-align: center;
+}
+#weekdays div {
+  width: 100px;
+  padding: 10px;
+}
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: rgb(255, 255, 255);
+  margin: 5px;
+  box-shadow: 0px 0px 3px #cbd4c2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 4px;
+  text-overflow: clip;
+}
+.day:hover {
+  background-color: #e8faed;
+  transform: scale(1.05);
+}
+
+.day + #currentDay {
+  background-color: #e8f4fa;
+}
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #02b32e;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+.padding {
+  cursor: default !important;
+  background-color: #beffbe !important;
+  box-shadow: none !important;
+}
+#newEventModal,
+#deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 12px;
+  background-color: #c1fcb2;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 300px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
+#eventTitleInput,
+#eventTitleInputDuration,
+#eventTitleInputDescription {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+#eventTitleInput:focus,
+#eventTitleInputDuration:focus,
+#eventTitleInputDescription:focus {
+  outline: none !important;
+  border: inset 1px solid red;
+  box-shadow: 0 0 10px #719ece;
+}
+#eventTitleInput.error,
+#eventTitleInputDuration.error,
+#eventTitleInputDescription.error {
+  border: 2px solid red;
+}
+#cancelButton,
+#deleteButton {
+  background-color: #d36c6c;
+}
+
+#cancelButton:hover,
+#deleteButton:hover {
+  background-color: #d18383;
+}
+#saveButton,
+#closeButton {
+  background-color: #92a1d1;
+}
+
+#saveButton:hover,
+#closeButton:hover {
+  background-color: #aeb8d6;
+}
+#eventText {
+  font-size: 14px;
+}
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
